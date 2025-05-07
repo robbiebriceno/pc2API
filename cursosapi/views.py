@@ -6,21 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.db.models import Q
 from datetime import datetime
 from .models import Profesor, Curso, Estudiante, Inscripcion, Calificacion, Asistencia
-from .serializers import (
-    ProfesorSerializer, 
-    CursoSerializer,
-    CursoDetalleSerializer,
-    EstudianteSerializer,
-    EstudianteDetalleSerializer,
-    InscripcionSerializer,
-    InscripcionDetalleSerializer,
-    CalificacionSerializer,
-    CalificacionDetalleSerializer,
-    AsistenciaSerializer,
-    AsistenciaDetalleSerializer,
-    HorarioEstudianteSerializer,
-    ListaAsistenciaSerializer,
-)
+
 
 class ProfesorViewSet(viewsets.ModelViewSet):
     queryset = Profesor.objects.all()
